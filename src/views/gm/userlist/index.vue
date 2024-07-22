@@ -442,7 +442,7 @@ export default {
         .then(res => {
           const { data, code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             this.serverList = data;
           } else {
             this.$message.error(msg);
@@ -503,7 +503,7 @@ export default {
               loading.close();
               const { code, msg } = res.data;
               // console.log(data,code,message)
-              if (+code === 200) {
+              if (+code === 0) {
                 // this.serverList = data;
                 this.$message.success('操作成功！')
                 this.$refs.table.reload();
@@ -527,7 +527,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('设置成功！')
             this.$refs.table.reload();
@@ -548,7 +548,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('操作成功！')
             this.editItemShow = false
@@ -568,7 +568,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('操作成功！')
             this.editItemShow = false
@@ -590,7 +590,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('操作成功！')
             this.SetFrozenShow = false
@@ -611,7 +611,7 @@ export default {
         .then(res => {
           var { data, code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             data = data[0] || {};
             this.tableData = data.hero || [];
           } else {

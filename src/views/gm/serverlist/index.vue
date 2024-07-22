@@ -43,7 +43,7 @@
           </el-table-column>
           <el-table-column prop="openServerTime" label="开服时间" align="center" show-overflow-tooltip min-width="180">
             <template slot-scope="{row}">
-              {{ row.openServerTime  | toDateByTimezone }}
+              {{ row.openServerTime  }}
             </template>
           </el-table-column>
 
@@ -159,7 +159,7 @@ export default {
   name: "gm",
   data() {
     return {
-      table: {url: '/gm/doRequest', where: {method:"serverlist"}},  // 表格配置
+      table: {url: '/servers/list', where: {method:"serverlist"}},  // 表格配置
       choose:[],
       editForm:{},
       stateShow:false,
@@ -201,7 +201,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('状态设置成功！')
             this.$refs.table.reload();
@@ -234,7 +234,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('时间设置成功！')
             this.$refs.table.reload();
@@ -261,7 +261,7 @@ export default {
           loading.close();
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('名称设置成功！')
             this.$refs.table.reload();
@@ -300,7 +300,7 @@ export default {
         .then(res => {
           loading.close();
           const { code, msg } = res.data;
-          if (+code === 200) {
+          if (+code === 0) {
             this.$message.success('设置成功！')
             this.$refs.table.reload();
             this.nameShow = false
@@ -317,7 +317,7 @@ export default {
         .then(res => {
           const { code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             // this.serverList = data;
             this.$message.success('推荐状态切换成功！')
           } else {

@@ -7,7 +7,7 @@ console.log(window.location.href);
 if(window.location.href.indexOf('//test') !== -1){
     name = 'GM测试后台';
 }else if(window.location.href.indexOf('//localhost') != -1){
-    name = 'GM本地后台';
+    name = '创界互娱GM后台';
 }else{
     name = 'GM后台';
 }

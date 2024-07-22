@@ -7,7 +7,7 @@ export default {
         .then(res => {
             const { data, code, msg } = res.data;
             // console.log(data,code,message)
-            if (+code === 200) {
+            if (+code === 0) {
                 c.serverList = [{"id":0, "name": "全服"}]
                 c.serverList = c.serverList.concat(data);  
                 return data;

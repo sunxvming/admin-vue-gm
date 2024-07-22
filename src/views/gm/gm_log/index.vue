@@ -76,7 +76,7 @@ export default {
         .then(res => {
           const { data, code, msg } = res.data;
           // console.log(data,code,message)
-          if (+code === 200) {
+          if (+code === 0) {
             this.serverList = data;
           } else {
             this.$message.error(msg);
