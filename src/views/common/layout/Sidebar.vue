@@ -1,6 +1,7 @@
 <!-- 侧边栏 -->
 <template>
   <el-aside class="ele-admin-sidebar ele-scrollbar-hide">
+    <div style="color: aliceblue;font-size: 18px; margin-left: 90px; margin-bottom: 10px;"><span>created by 孙旭明</span></div>
     <el-menu :collapse="collapse" :default-active="active" @select="onMenuSelect" :collapse-transition="false"
              :class="{'ele-menu-dark':theme.sideStyle===1}" :unique-opened="theme.sideUniqueOpen">
       <template v-for="(menu,index) in menus">

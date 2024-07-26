@@ -10,6 +10,7 @@
     </el-menu>
     <ele-breadcrumb v-if="theme.layoutStyle===0"/><!-- 面包屑导航 -->
     <ele-header-nav v-if="theme.layoutStyle!==0"/><!-- 顶部菜单区 -->
+    <div class="ele-admin-logo"><span>设计实现者：孙旭明</span></div>
     <ele-header-right/><!-- 右侧功能区 -->
   </div>
 </template>

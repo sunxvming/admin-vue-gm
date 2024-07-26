@@ -4,7 +4,7 @@
 
       <!-- 操作按钮 -->
       <div class="ele-table-tool ele-table-tool-default">
-        <el-button @click="showEdit=true" type="primary" icon="el-icon-plus" class="ele-btn-icon" size="small" >发送跑马灯
+        <el-button @click="showEdit=true" type="primary" icon="el-icon-plus" class="ele-btn-icon" size="small" >发送游戏公告
         </el-button>
 
       </div>
@@ -47,7 +47,7 @@
       </ele-data-table>
     </el-card>
     <!-- 编辑弹窗 -->
-    <el-dialog :title="'发送跑马灯'" :visible.sync="showEdit" width="800px"
+    <el-dialog :title="'发送游戏公告'" :visible.sync="showEdit" width="800px"
                @closed="editForm={}" :destroy-on-close="true" :close-on-click-modal="false" custom-class="ele-dialog-form" :lock-scroll="false">
       <el-form :model="editForm" ref="editForm" :rules="editRules" label-width="100px">
 

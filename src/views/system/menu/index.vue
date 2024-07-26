@@ -38,12 +38,19 @@
         </el-table-column>
         <el-table-column prop="path" label="路由地址" show-overflow-tooltip min-width="150"/>
         <el-table-column prop="permission" label="权限标识" show-overflow-tooltip min-width="150"/>
-        <el-table-column prop="status" label="状态" sortable min-width="100">
+        <!-- <el-table-column prop="status" label="状态" sortable min-width="100">
           <template slot-scope="{row}">
             <ele-dot :type="['danger', 'success'][row.status]" :ripple="row.status===0"
                       :text="['禁用','正常'][row.status]"/>
           </template>
-        </el-table-column>
+        </el-table-column> -->
+
+        <el-table-column prop="status" label="状态" width="75px" sortable="custom" :resizable="false">
+            <template slot-scope="{row}">
+              <el-switch v-model="row.status" @change="editStatus(row)" :active-value="1" :inactive-value="2"/>
+            </template>
+          </el-table-column>
+        
         <el-table-column prop="sort" label="排序" width="60px" align="center"/>
         <el-table-column label="创建时间" show-overflow-tooltip min-width="160" align="center">
           <template slot-scope="{row}">{{ row.createdAt }}</template>
@@ -194,6 +201,24 @@ export default {
         this.$message.error(e.message);
       });
     },
+    /* 更改状态 */
+    editStatus(row) {
+      const loading = this.$loading({lock: true});
+      let params = {"id":row.id, status:row.status};  // Object.assign({}, row);
+      this.$http.put('/menu/status', params).then(res => {
+        loading.close();
+        if (res.data.code === 0) {
+          this.$message({type: 'success', message: res.data.msg});
+        } else {
+          row.status = !row.status ? 2 : 1;
+          this.$message.error(res.data.msg);
+        }
+      }).catch(e => {
+        loading.close();
+        this.$message.error(e.message);
+      });
+    },
+
     /* 保存编辑 */
     save() {
       this.$refs['editForm'].validate((valid) => {
