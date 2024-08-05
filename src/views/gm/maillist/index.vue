@@ -85,7 +85,8 @@
             min-width="120"
           >
             <template slot-scope="{row}">
-              {{ row.content|base64Encode }}
+              {{ row.content }}
+              <!-- {{ row.content|base64Encode }} -->
             </template>
 
           </el-table-column>

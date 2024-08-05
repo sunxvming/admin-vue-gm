@@ -3,11 +3,11 @@
     <el-card shadow="never">
       <!-- 搜索表单 -->
       <!-- 操作按钮 -->
-      <div class="ele-table-tool ele-table-tool-default">
+      <!-- <div class="ele-table-tool ele-table-tool-default">
         <el-button @click="setWhiteList()" type="primary" icon="el-icon-plus" class="ele-btn-icon" size="small" >设置白名单
         </el-button>
 
-      </div>
+      </div> -->
       <!-- 数据表格 -->
       <ele-data-table ref="table" :config="table" :choose.sync="choose" height="calc(100vh - 260px)" highlight-current-row>
         <template >
@@ -16,7 +16,7 @@
           <el-table-column prop="locale" label="大区" align="center" show-overflow-tooltip min-width="100"/>
 
           <el-table-column prop="addr" label="地址" align="center" show-overflow-tooltip min-width="100"/>
-          <el-table-column prop="port" label="端口" align="center" show-overflow-tooltip min-width="100"/>
+          <!-- <el-table-column prop="port" label="端口" align="center" show-overflow-tooltip min-width="100"/> -->
           <el-table-column prop="userCount" label="在线人数" align="center" show-overflow-tooltip min-width="100"/>
           <el-table-column prop="registeredNum" label="注册角色数" align="center" show-overflow-tooltip min-width="100"/>
           <el-table-column prop="percentConversion" label="转化率" align="center" show-overflow-tooltip min-width="100"/>
@@ -36,11 +36,11 @@
               ></el-switch>
             </template>
           </el-table-column>
-          <el-table-column prop="isOpenServer" label="是否开服" align="center" show-overflow-tooltip min-width="100">
+          <!-- <el-table-column prop="isOpenServer" label="是否开服" align="center" show-overflow-tooltip min-width="100">
             <template slot-scope="{row}">
               {{ row.isOpenServer ? '开启' : '关闭' }}
             </template>
-          </el-table-column>
+          </el-table-column> -->
           <el-table-column prop="openServerTime" label="开服时间" align="center" show-overflow-tooltip min-width="180">
             <template slot-scope="{row}">
               {{ row.openServerTime  }}
@@ -48,12 +48,12 @@
           </el-table-column>
 
 
-          <el-table-column label="操作" width="500px" align="center" :resizable="true" fixed="right">
+          <el-table-column label="操作" width="200px" align="center" :resizable="true" fixed="right">
             <template slot-scope="{row}">
-              <el-link @click="setState(row)" icon="el-icon-edit" type="primary" :underline="false" >设置服务器状态</el-link>
+              <el-link @click="setState(row)" icon="el-icon-edit" type="primary" :underline="false" >设置状态</el-link>
               <!-- <el-link @click="setRecommend(row)" icon="el-icon-edit" type="primary" :underline="false" >设置推荐服</el-link> -->
-              <el-link @click="setOpenTime(row)" icon="el-icon-edit" type="primary" :underline="false" >设置开服时间</el-link>
-              <el-link @click="editServerName(row)" icon="el-icon-edit" type="primary" :underline="false" >修改服务器名字</el-link>
+              <!-- <el-link @click="setOpenTime(row)" icon="el-icon-edit" type="primary" :underline="false" >设置开服时间</el-link> -->
+              <el-link @click="editServerName(row)" icon="el-icon-edit" type="primary" :underline="false" >修改名字</el-link>
             </template>
           </el-table-column>
         </template>

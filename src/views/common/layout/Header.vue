@@ -10,7 +10,8 @@
     </el-menu>
     <ele-breadcrumb v-if="theme.layoutStyle===0"/><!-- 面包屑导航 -->
     <ele-header-nav v-if="theme.layoutStyle!==0"/><!-- 顶部菜单区 -->
-    <div class="ele-admin-logo"><span>设计实现者：孙旭明</span></div>
+    <div class="ele-admin-logo2"><span>设计实现者：
+      <b>孙旭明</b></span></div>
     <ele-header-right/><!-- 右侧功能区 -->
   </div>
 </template>
@@ -54,3 +55,28 @@ export default {
   }
 }
 </script>
+
+
+<style >
+.ele-admin-logo2 {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    width: 256px;
+    height: 60px;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+
+
+</style>

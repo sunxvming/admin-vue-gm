@@ -146,7 +146,7 @@
           </el-col>
 
 
-          <el-col :md="4" :sm="12" v-show="show_list(['OrderLog','FirstPayLog'])">
+          <!-- <el-col :md="4" :sm="12" v-show="show_list(['OrderLog','FirstPayLog'])">
             <el-form-item label="是否沙盒:">
               <el-select
                 v-model.number="where.is_sandbox"
@@ -158,7 +158,7 @@
                 <el-option label="否" value=0 />
               </el-select>
             </el-form-item>
-          </el-col>
+          </el-col> -->
 
           <el-col :md="4" :sm="12">
             <div class="ele-form-actions">
@@ -304,11 +304,11 @@ export default {
       const params =  Object.assign({}, this.where);
 
       // console.log(params)
-      if(params.startTime == undefined ||params.endTime == undefined || params.startTime == 0 || params.endTime == 0){
-        this.$message.error("请先选择开始和结束时间!");
-        this.loading = false;
-        return;
-      }
+      // if(params.startTime == undefined ||params.endTime == undefined || params.startTime == 0 || params.endTime == 0){
+      //   this.$message.error("请先选择开始和结束时间!");
+      //   this.loading = false;
+      //   return;
+      // }
 
       params.startTime = gm.timeByZone(params.startTime);
       params.endTime = gm.timeByZone(params.endTime);

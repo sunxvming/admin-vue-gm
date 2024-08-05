@@ -327,18 +327,18 @@ export default {
           field: 'payType',
           label: '支付方式',
         },      
-        {
-          field: 'isSandbox',
-          label: '是否沙盒订单',
-        }, 
-        {
-          field: 'isSubscription',
-          label: '是否为订阅商品',
-        }, 
-        {
-          field: 'subscriptionEvent',
-          label: '订阅事件的类型',
-        },        
+        // {
+        //   field: 'isSandbox',
+        //   label: '是否沙盒订单',
+        // }, 
+        // {
+        //   field: 'isSubscription',
+        //   label: '是否为订阅商品',
+        // }, 
+        // {
+        //   field: 'subscriptionEvent',
+        //   label: '订阅事件的类型',
+        // },        
       
       ]
 

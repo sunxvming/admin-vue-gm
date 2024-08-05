@@ -64,7 +64,7 @@
                 {{ activity_type_map[row.groupId] }}
             </template>
           </el-table-column>   -->
-          <el-table-column prop="data1" label="活动子id" sortable="custom" show-overflow-tooltip min-width="110"/>
+          <el-table-column prop="subId" label="活动子id" sortable="custom" show-overflow-tooltip min-width="110"/>
           <!-- <el-table-column prop="timeType" label="活动类型" sortable="custom" show-overflow-tooltip min-width="80">
             <template slot-scope="{row}">
                 {{ act_type_list[row.activityType-1] ? act_type_list[row.activityType-1].name : '-'}}

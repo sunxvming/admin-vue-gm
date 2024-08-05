@@ -180,20 +180,20 @@
             show-overflow-tooltip
             min-width="100"
           />
-          <el-table-column
+          <!-- <el-table-column
             prop="guild"
             label="所在公会"
             align="center"
             show-overflow-tooltip
             min-width="100"
-          />
-          <el-table-column
+          /> -->
+          <!-- <el-table-column
             prop="guildjob"
             label="公会职称"
             align="center"
             show-overflow-tooltip
             min-width="100"
-          />
+          /> -->
           <!-- <el-table-column
             prop="attr"
             label="角色属性"
@@ -222,13 +222,13 @@
             show-overflow-tooltip
             min-width="100"
           />
-          <el-table-column
+          <!-- <el-table-column
             prop="suspendtime"
             label="玩家封停时间"
             align="center"
             show-overflow-tooltip
             min-width="100"
-          />
+          /> -->
           <el-table-column
             prop="power"
             label="玩家战力"
@@ -238,7 +238,7 @@
           />
 
 
-          <el-table-column
+          <!-- <el-table-column
             label="其他信息"
             width="220px"
             align="center"
@@ -247,7 +247,7 @@
             <template slot-scope="{row}">
               <el-link @click="showDetail(row)" icon="el-icon-edit" type="primary" :underline="false" >查看英雄详情</el-link>
             </template>
-          </el-table-column>
+          </el-table-column> -->
 
           <el-table-column
             label="操作"

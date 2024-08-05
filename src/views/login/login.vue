@@ -2,7 +2,8 @@
   <div class="login-wrapper">
     <el-form ref="loginForm" :model="form" :rules="rules" class="login-form ele-bg-white" size="large"
              @keyup.enter.native="doSubmit">
-      <h4>后台管理系统</h4>
+      <h3>创界互娱游戏管理</h3>
+      <h4>创作者：孙旭明</h4>   
       <el-form-item prop="username">
         <el-input placeholder="请输入登录账号" v-model="form.username" prefix-icon="el-icon-user" clearable/>
       </el-form-item>
@@ -135,10 +136,16 @@ export default {
   border-radius: 4px;
   z-index: 2;
 }
-
+.login-form h3 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
 .login-form h4 {
   text-align: center;
   margin: 0 0 25px 0;
+  font-size: 25px;
+
 }
 
 .login-form > .el-form-item {
