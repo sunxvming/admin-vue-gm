@@ -45,12 +45,12 @@
           </el-col>
         </el-row>
       </el-form>
-      <div style="    margin-left: 20px;
+      <!-- <div style="    margin-left: 20px;
     margin-bottom: 10px;">
         活动配置地址：
         <div>测试服: <a :href="test_activity_url">{{this.test_activity_url}}</a></div>
         <div>正式服: <a :href="activity_url">{{this.activity_url}}</a></div>
-      </div>
+      </div> -->
 
       <!-- 数据表格 -->
       <ele-data-table ref="table" :config="table" :choose.sync="choose" height="calc(100vh - 260px)" highlight-current-row>
